@@ -3,7 +3,7 @@
 ```sh
 git init
 
-git config user.name "..."
+git config user.name "EAG-PT"
 git config user.email "..."
 git commit -m "..."
 
