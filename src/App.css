@@ -18,10 +18,10 @@ p {
 
 h1 {
   color: #121a21;
-  font-size: clamp(2rem, 4.7vw, 4.55rem);
+  font-size: clamp(1.8rem, 4vw, 3.85rem);
   line-height: 1.04;
   font-weight: 850;
-  max-width: 920px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
@@ -89,6 +89,10 @@ p {
   gap: 12px;
 }
 
+.footer-links {
+  padding-top: 18px;
+}
+
 .links a {
   display: inline-flex;
   align-items: center;
@@ -126,7 +130,7 @@ video {
   max-width: 540px;
 }
 
-details {
+.abstract {
   max-width: 920px;
   margin: 28px auto 8px;
   padding: 18px 20px 18px 28px;
@@ -136,27 +140,51 @@ details {
   overflow: hidden;
 }
 
-summary {
+.abstract-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
+  border: 0;
   color: #163f60;
+  background: transparent;
   font-weight: 800;
-  list-style-position: outside;
+  padding: 0;
   transition: color 180ms ease;
 }
 
-details::details-content {
-  block-size: 0;
+.abstract-toggle:hover {
+  color: #8d3d2c;
+}
+
+.abstract-marker {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid currentColor;
+  transition: transform 220ms ease;
+}
+
+.abstract.is-open .abstract-marker {
+  transform: rotate(90deg);
+}
+
+.abstract-content {
+  max-height: 0;
+  opacity: 0;
   overflow: hidden;
   transition:
-    block-size 240ms ease,
-    content-visibility 240ms allow-discrete;
+    max-height 320ms ease,
+    opacity 220ms ease;
 }
 
-details[open]::details-content {
-  block-size: auto;
+.abstract.is-open .abstract-content {
+  max-height: 520px;
+  opacity: 1;
 }
 
-details p {
+.abstract-content p {
   margin: 14px 0 0;
 }
 
@@ -194,7 +222,7 @@ code {
     justify-content: center;
   }
 
-  details {
+  .abstract {
     padding: 16px 16px 16px 22px;
   }
 }
@@ -238,14 +266,18 @@ code {
     box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42);
   }
 
-  details,
+  .abstract,
   code {
     border-color: rgba(199, 211, 218, 0.16);
     background: rgba(26, 36, 43, 0.78);
   }
 
-  summary {
+  .abstract-toggle {
     color: #cde7f7;
+  }
+
+  .abstract-toggle:hover {
+    color: #f2b49d;
   }
 
   code {

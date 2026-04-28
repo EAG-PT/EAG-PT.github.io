@@ -1,5 +1,6 @@
 import "./App.css";
 
+import { useState } from "react";
 import { SiArxiv } from "react-icons/si";
 import { FaGithub, FaCity } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
@@ -26,6 +27,8 @@ const BibTeX_Citation = `@article{XijieYang2026EAG-PT,
 }`;
 
 function App() {
+  const [isAbstractOpen, setIsAbstractOpen] = useState(false);
+
   return (
     <main>
       <section className="hero">
@@ -133,43 +136,58 @@ function App() {
           }}
         />
       </p>
-      <details>
-        <summary>Paper Abstract</summary>
-        <p>
-          Recent radiance-field-based reconstruction methods, such as NeRF and
-          3DGS, achieve high visual fidelity for indoor scenes, but often break
-          down under scene editing due to baked illumination and the lack of
-          explicit light transport. In contrast, inverse path tracing methods
-          based on mesh representations enforce correct light transport but
-          require highly accurate geometry, making them difficult to apply
-          robustly to real indoor scenes. We present{" "}
-          <i>Emission-Aware Gaussians and Path Tracing (EAG-PT)</i>, a method
-          for <i>physically based reconstruction and rendering</i> of indoor
-          scenes using a unified 2D Gaussian representation,{" "}
-          <i>targeting editable diffuse global illumination</i>. Our approach
-          consists of three key ideas: (1) representing indoor scenes with{" "}
-          <b>2D Gaussians as a transport-friendly geometric proxy</b> that
-          avoids explicit mesh reconstruction; (2) explicitly{" "}
-          <b>separating emissive and non-emissive components</b> during
-          reconstruction to support editing; and (3) decoupling reconstruction
-          from final rendering by using{" "}
-          <b>
-            efficient single-bounce optimization and high-quality multi-bounce
-            path tracing
-          </b>
-          , respectively. Experiments on synthetic and real indoor scenes show
-          that EAG-PT produces{" "}
-          <u>more natural and physically consistent edited renderings</u> than
-          radiance-field reconstructions, while{" "}
-          <u>
-            preserving finer geometric detail and avoiding mesh-induced
-            artifacts
-          </u>{" "}
-          compared with mesh-based inverse path tracing. These results highlight
-          the potential of our approach for applications such as interior design,
-          XR content creation, and embodied AI.
-        </p>
-      </details>
+      <section
+        className={`abstract ${isAbstractOpen ? "is-open" : ""}`}
+        aria-labelledby="abstract-heading"
+      >
+        <button
+          id="abstract-heading"
+          className="abstract-toggle"
+          type="button"
+          aria-expanded={isAbstractOpen}
+          aria-controls="abstract-content"
+          onClick={() => setIsAbstractOpen((isOpen) => !isOpen)}
+        >
+          <span className="abstract-marker" aria-hidden="true" />
+          <span>Paper Abstract</span>
+        </button>
+        <div id="abstract-content" className="abstract-content">
+          <p>
+            Recent radiance-field-based reconstruction methods, such as NeRF and
+            3DGS, achieve high visual fidelity for indoor scenes, but often
+            break down under scene editing due to baked illumination and the
+            lack of explicit light transport. In contrast, inverse path tracing
+            methods based on mesh representations enforce correct light
+            transport but require highly accurate geometry, making them
+            difficult to apply robustly to real indoor scenes. We present{" "}
+            <i>Emission-Aware Gaussians and Path Tracing (EAG-PT)</i>, a method
+            for <i>physically based reconstruction and rendering</i> of indoor
+            scenes using a unified 2D Gaussian representation,{" "}
+            <i>targeting editable diffuse global illumination</i>. Our approach
+            consists of three key ideas: (1) representing indoor scenes with{" "}
+            <b>2D Gaussians as a transport-friendly geometric proxy</b> that
+            avoids explicit mesh reconstruction; (2) explicitly{" "}
+            <b>separating emissive and non-emissive components</b> during
+            reconstruction to support editing; and (3) decoupling reconstruction
+            from final rendering by using{" "}
+            <b>
+              efficient single-bounce optimization and high-quality multi-bounce
+              path tracing
+            </b>
+            , respectively. Experiments on synthetic and real indoor scenes show
+            that EAG-PT produces{" "}
+            <u>more natural and physically consistent edited renderings</u> than
+            radiance-field reconstructions, while{" "}
+            <u>
+              preserving finer geometric detail and avoiding mesh-induced
+              artifacts
+            </u>{" "}
+            compared with mesh-based inverse path tracing. These results
+            highlight the potential of our approach for applications such as
+            interior design, XR content creation, and embodied AI.
+          </p>
+        </div>
+      </section>
       <h2>Pipeline</h2>
       <p>
         <img
@@ -275,7 +293,7 @@ function App() {
           {BibTeX_Citation}
         </code>
       </p>
-      <p className="links">
+      <p className="links footer-links">
         <a
           href="https://github.com/InternRobotics"
           target="_blank"
