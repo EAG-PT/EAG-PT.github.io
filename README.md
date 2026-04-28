@@ -8,7 +8,7 @@
 
 ```sh
 npm create vite@latest
--> framework: React, variant: JavaScript
+# -> framework: React, variant: JavaScript
 npm install
 npm run dev
 
