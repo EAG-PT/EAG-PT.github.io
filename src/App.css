@@ -180,7 +180,7 @@ video {
 }
 
 .abstract.is-open .abstract-content {
-  max-height: 520px;
+  max-height: 1600px;
   opacity: 1;
 }
 
@@ -224,6 +224,10 @@ code {
 
   .abstract {
     padding: 16px 16px 16px 22px;
+  }
+
+  .abstract.is-open .abstract-content {
+    max-height: 2400px;
   }
 }
 
