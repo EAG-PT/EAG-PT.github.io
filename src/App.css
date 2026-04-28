@@ -129,16 +129,31 @@ video {
 details {
   max-width: 920px;
   margin: 28px auto 8px;
-  padding: 18px 20px;
+  padding: 18px 20px 18px 28px;
   border: 1px solid rgba(36, 49, 61, 0.16);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.66);
+  overflow: hidden;
 }
 
 summary {
   cursor: pointer;
   color: #163f60;
   font-weight: 800;
+  list-style-position: outside;
+  transition: color 180ms ease;
+}
+
+details::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition:
+    block-size 240ms ease,
+    content-visibility 240ms allow-discrete;
+}
+
+details[open]::details-content {
+  block-size: auto;
 }
 
 details p {
@@ -180,7 +195,7 @@ code {
   }
 
   details {
-    padding: 16px;
+    padding: 16px 16px 16px 22px;
   }
 }
 

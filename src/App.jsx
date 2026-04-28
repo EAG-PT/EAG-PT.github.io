@@ -76,7 +76,7 @@ function App() {
       </p>
       <p className="affiliations">
         <sup>1</sup> Zhejiang University <sup>2</sup> Shanghai Artificial
-        Intelligence Laboratory <sup>*</sup> Corresponding authors.
+        Intelligence Laboratory <sup>*</sup> corresponding authors
         <br />
         <sup>3</sup> Shanghai Jiao Tong University <sup>4</sup> The Chinese
         University of Hong Kong <sup>5</sup> The University of Hong Kong{" "}
