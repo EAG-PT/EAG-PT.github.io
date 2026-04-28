@@ -1,5 +1,18 @@
 import "./App.css";
 
+import { SiArxiv } from "react-icons/si";
+import { FaGithub, FaCity } from "react-icons/fa";
+import { IoLibrary } from "react-icons/io5";
+
+const Text_Citation = `Xijie Yang, Mulin Yu, Changjian Jiang, Kerui Ren, Tao Lu, Jiangmiao Pang, Dahua Lin, Bo Dai, and Linning Xu. 2026. EAG-PT: Emission-Aware Gaussians and Path Tracing for Diffuse Indoor Scene Reconstruction and Editing. In Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers (SIGGRAPH Conference Papers ’26), July 19–23, 2026, Los Angeles, CA, USA. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3799902.3811054`;
+
+const BibTeX_Citation = `@article{XijieYang2026EAG-PT,
+  title={EAG-PT: Emission-Aware Gaussians and Path Tracing for Indoor Scene Reconstruction and Editing},
+  author={Yang, Xijie and Yu, Mulin and Jiang, Changjian and Ren, Kerui and Lu, Tao and Pang, Jiangmiao and Lin, Dahua and Dai, Bo and Xu, Linning},
+  journal={arXiv preprint arXiv:2601.23065},
+  year={2026}
+}`;
+
 function App() {
   return (
     <>
@@ -59,6 +72,54 @@ function App() {
         University of Hong Kong <sup>5</sup> The University of Hong Kong{" "}
         <sup>6</sup> Feeling AI
       </p>
+
+      <p>
+        <a
+          href="https://arxiv.org/abs/2601.23065"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SiArxiv /> Paper <small>(arXiv)</small>
+        </a>{" "}
+        {/* <a
+          href="https://doi.org/10.1145/3799902.3811054"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoLibrary /> Paper <small>(publisher)</small>
+        </a>{" "} */}
+        <a
+          href="https://github.com/InternRobotics/EAG-PT"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub /> Code
+        </a>
+      </p>
+
+      <h2>Text Citation</h2>
+      <p>
+        <code>{Text_Citation}</code>
+      </p>
+
+      <h2>BibTeX Citation</h2>
+      <p>
+        <code
+          style={{
+            whiteSpace: "pre-wrap",
+          }}
+        >
+          {BibTeX_Citation}
+        </code>
+      </p>
+
+      <a
+        href="https://city-super.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaCity /> CitySuper Projects
+      </a>
     </>
   );
 }
