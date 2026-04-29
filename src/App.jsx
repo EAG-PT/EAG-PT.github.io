@@ -56,7 +56,8 @@ function App() {
         <a href="https://cskrren.github.io/" title="任柯睿">
           Kerui Ren
         </a>
-        <sup>3,2</sup>{" "}
+        <sup>3,2</sup>
+        <br />
         <a href="https://inspirelt.github.io/" title="鲁涛">
           Tao Lu
         </a>
@@ -78,13 +79,25 @@ function App() {
         </a>
         <sup>4,2</sup>
       </p>
-      <p className="affiliations">
+      {/* <p className="affiliations">
         <sup>1</sup> Zhejiang University <sup>2</sup> Shanghai Artificial
         Intelligence Laboratory <sup>*</sup> corresponding authors
         <br />
         <sup>3</sup> Shanghai Jiao Tong University <sup>4</sup> The Chinese
         University of Hong Kong <sup>5</sup> The University of Hong Kong{" "}
         <sup>6</sup> Feeling AI
+      </p> */}
+      <p className="affiliations">
+        {/* <sup>*</sup> corresponding authors */}
+        {/* <br /> */}
+        <sup>1</sup>Zhejiang University <sup>2</sup>Shanghai Artificial
+        Intelligence Laboratory
+        <br />
+        <sup>3</sup>Shanghai Jiao Tong University <sup>4</sup>The Chinese
+        University of Hong Kong
+        <br />
+        <sup>5</sup>The University of Hong Kong <sup>6</sup>Feeling AI (
+        <sup>*</sup>corresponding authors)
       </p>
       <p className="links">
         <a
