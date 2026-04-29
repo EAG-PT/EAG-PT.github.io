@@ -1,9 +1,10 @@
 import "./App.css";
 
 import { useState } from "react";
+
 import { SiArxiv } from "react-icons/si";
 import { FaGithub, FaCity } from "react-icons/fa";
-import { IoLibrary } from "react-icons/io5";
+import { IoLibrary, IoCameraSharp } from "react-icons/io5";
 import { RiRobot2Fill } from "react-icons/ri";
 
 import Figure_Teaser from "./figures/Teaser.jpg";
@@ -91,7 +92,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <SiArxiv /> Paper <small>(arXiv)</small>
+          <SiArxiv /> Paper
         </a>{" "}
         {/* <a
           href="https://doi.org/10.1145/3799902.3811054"
@@ -118,14 +119,7 @@ function App() {
         of mesh-based inverse rendering.
       </p>
       <p>
-        <video
-          src={Video_F}
-          controls
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+        <video src={Video_F} controls autoPlay loop muted playsInline />
       </p>
       <p>
         <img
@@ -240,14 +234,7 @@ function App() {
       </p>
       <h3>Scene Editing on Eyeful Tower Scenes</h3>
       <p>
-        <video
-          src={Video_E}
-          controls
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+        <video src={Video_E} controls autoPlay loop muted playsInline />
       </p>
       <p>
         {" "}
@@ -261,14 +248,7 @@ function App() {
       </p>
       <h3>Comparison with Mesh-based FIPT</h3>
       <p>
-        <video
-          src={Video_FIPT}
-          controls
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+        <video src={Video_FIPT} controls autoPlay loop muted playsInline />
       </p>
       <p>
         <img
@@ -294,6 +274,13 @@ function App() {
         </code>
       </p>
       <p className="links footer-links">
+        <a
+          href="https://xijie-yang.github.io/SDG/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoCameraSharp /> SDG Publications
+        </a>{" "}
         <a
           href="https://github.com/InternRobotics"
           target="_blank"
