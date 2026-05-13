@@ -20,7 +20,7 @@ import Video_FIPT from "./videos/FIPT.mp4";
 
 const Text_Citation = `Xijie Yang, Mulin Yu, Changjian Jiang, Kerui Ren, Tao Lu, Jiangmiao Pang, Dahua Lin, Bo Dai, and Linning Xu. 2026. EAG-PT: Emission-Aware Gaussians and Path Tracing for Diffuse Indoor Scene Reconstruction and Editing. In Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers (SIGGRAPH Conference Papers ’26), July 19–23, 2026, Los Angeles, CA, USA. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3799902.3811054`;
 
-const BibTeX_Citation = `@misc{XijieYang2026EAG-PT,
+const BibTeX_Citation = `@misc{EAG-PT-2026-XijieYang,
     title={EAG-PT: Emission-Aware Gaussians and Path Tracing for Diffuse Indoor Scene Reconstruction and Editing},
     author={Xijie Yang and Mulin Yu and Changjian Jiang and Kerui Ren and Tao Lu and Jiangmiao Pang and Dahua Lin and Bo Dai and Linning Xu},
     year={2026},
