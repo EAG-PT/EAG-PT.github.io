@@ -100,8 +100,7 @@ function App() {
         <sup>3</sup>Shanghai Jiao Tong University <sup>4</sup>The Chinese
         University of Hong Kong
         <br />
-        <sup>5</sup>The University of Hong Kong <sup>6</sup>Feeling AI (
-        <sup>*</sup>corresponding authors)
+        <sup>5</sup>The University of Hong Kong <sup>6</sup>Feeling AI <sup>*</sup>corresponding authors
       </p>
       <p className="links">
         <a
