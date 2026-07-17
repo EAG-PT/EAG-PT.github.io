@@ -20,15 +20,19 @@ import Video_FIPT from "./videos/FIPT.mp4";
 
 const Text_Citation = `Xijie Yang, Mulin Yu, Changjian Jiang, Kerui Ren, Tao Lu, Jiangmiao Pang, Dahua Lin, Bo Dai, and Linning Xu. 2026. EAG-PT: Emission-Aware Gaussians and Path Tracing for Diffuse Indoor Scene Reconstruction and Editing. In Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers (SIGGRAPH Conference Papers ’26), July 19–23, 2026, Los Angeles, CA, USA. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3799902.3811054`;
 
-const BibTeX_Citation = `@misc{EAG-PT-2026-XijieYang,
-    title={EAG-PT: Emission-Aware Gaussians and Path Tracing for Diffuse Indoor Scene Reconstruction and Editing},
-    author={Xijie Yang and Mulin Yu and Changjian Jiang and Kerui Ren and Tao Lu and Jiangmiao Pang and Dahua Lin and Bo Dai and Linning Xu},
-    year={2026},
-    eprint={2601.23065},
-    archivePrefix={arXiv},
-    primaryClass={cs.GR},
-    doi={https://doi.org/10.1145/3799902.3811054},
-    url={https://arxiv.org/abs/2601.23065},
+const BibTeX_Citation = `@inproceedings{EAG-PT-2026-XijieYang,
+    author = {Yang, Xijie and Yu, Mulin and Jiang, Changjian and Ren, Kerui and Lu, Tao and Pang, Jiangmiao and Lin, Dahua and Dai, Bo and Xu, Linning},
+    title = {EAG-PT: Emission-Aware Gaussians and Path Tracing for Diffuse Indoor Scene Reconstruction and Editing},
+    year = {2026},
+    isbn = {9798400725548},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3799902.3811054},
+    doi = {10.1145/3799902.3811054},
+    booktitle = {Proceedings of the Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers},
+    articleno = {149},
+    numpages = {12},
+    series = {SIGGRAPH Conference Papers '26}
 }`;
 
 function App() {
@@ -100,23 +104,24 @@ function App() {
         <sup>3</sup>Shanghai Jiao Tong University <sup>4</sup>The Chinese
         University of Hong Kong
         <br />
-        <sup>5</sup>The University of Hong Kong <sup>6</sup>Feeling AI <sup>*</sup>corresponding authors
+        <sup>5</sup>The University of Hong Kong <sup>6</sup>Feeling AI{" "}
+        <sup>*</sup>corresponding authors
       </p>
       <p className="links">
+        <a
+          href="https://doi.org/10.1145/3799902.3811054"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoLibrary /> Paper (publisher)
+        </a>{" "}
         <a
           href="https://arxiv.org/abs/2601.23065"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <SiArxiv /> Paper
+          <SiArxiv /> Paper (arXiv)
         </a>{" "}
-        {/* <a
-          href="https://doi.org/10.1145/3799902.3811054"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <IoLibrary /> Paper <small>(publisher)</small>
-        </a>{" "} */}
         <a
           href="https://github.com/InternRobotics/EAG-PT"
           target="_blank"
